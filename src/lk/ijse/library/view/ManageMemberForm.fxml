@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="699.0" prefWidth="1370.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.library.controller.ManageMemberFormController">
+   <children>
+      <AnchorPane layoutY="-10.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="710.0" prefWidth="435.0" style="-fx-background-color: #D3CCE3;">
+         <children>
+            <JFXTextField fx:id="txtMemberId" layoutX="166.0" layoutY="40.0" onKeyPressed="#idOnKeyPress" onKeyReleased="#idOnKeyRelease" prefHeight="30.0" prefWidth="261.0" promptText="Enter Member Id" />
+            <Label layoutX="47.0" layoutY="52.0" prefHeight="25.0" prefWidth="111.0" text="Member Id       :" textFill="#ff6100">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtMamberName" layoutX="164.0" layoutY="133.0" onKeyPressed="#nameOnKeyPrss" onKeyReleased="#nameOkmKeyRelease" prefHeight="25.0" prefWidth="261.0" promptText="Enter Member Name" />
+            <Label layoutX="42.0" layoutY="138.0" prefHeight="25.0" prefWidth="111.0" text="Member  Name :" textFill="#ff6100">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="13.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/adminIcons/male_user_50px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="13.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/adminIcons/icons8-id-48.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="13.0" layoutY="311.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/adminIcons/icons8_Home_26px_2.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="txtAddress" layoutX="164.0" layoutY="311.0" onKeyPressed="#addressOnKeyPress" onKeyReleased="#addressOnKeyRelease" prefHeight="25.0" prefWidth="261.0" promptText="Enter Address" />
+            <Label layoutX="44.0" layoutY="316.0" prefHeight="25.0" prefWidth="111.0" text="Address            :" textFill="#ff6100">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <JFXDatePicker fx:id="txtDate" defaultColor="#7e0ced" layoutX="167.0" layoutY="489.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="261.0" promptText="Enter r Register Date" />
+            <Label layoutX="44.0" layoutY="489.0" prefHeight="25.0" prefWidth="111.0" text="Date                 :" textFill="#ff6100">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="41.0" layoutY="224.0" prefHeight="25.0" prefWidth="111.0" text="Member  Email : " textFill="#ff6100">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="12.0" layoutY="224.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons/icons8_Secured_Letter_50px.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="txtEmail" layoutX="165.0" layoutY="219.0" onKeyPressed="#emailOnKeyPrsse" onKeyReleased="#emailOnKeyRelesae" prefHeight="25.0" prefWidth="261.0" promptText="Enter  Email" />
+            <Label layoutX="34.0" layoutY="403.0" prefHeight="25.0" prefWidth="142.0" text="Phone  Number  :" textFill="#ff6100">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="10.0" layoutY="397.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons/icons8_Google_Mobile_50px.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="txtTeleNum" layoutX="166.0" layoutY="397.0" onKeyPressed="#teleOnKeyPress" onKeyReleased="#teleOnKeyRelease" prefHeight="25.0" prefWidth="261.0" promptText="Enter Telephone Num" />
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="10.0" layoutY="489.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons/icons8-calendar-64.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="14.0" layoutY="605.0" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="29.0" prefWidth="73.0" style="-fx-background-color: #ff2c2c;" text="Add" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="126.0" layoutY="605.0" mnemonicParsing="false" onAction="#txtSearchOnAction" prefHeight="29.0" prefWidth="73.0" style="-fx-background-color: #ff2c2c;" text="Search" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="237.0" layoutY="605.0" mnemonicParsing="false" onAction="#txtUpdateOnAction" prefHeight="29.0" prefWidth="73.0" style="-fx-background-color: #ff2c2c;" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="350.0" layoutY="605.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="29.0" prefWidth="73.0" style="-fx-background-color: #ff2c2c;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Label fx:id="lblMemId" layoutX="167.0" layoutY="77.0" prefHeight="17.0" prefWidth="261.0" textFill="RED" />
+            <Label fx:id="lblMemName" layoutX="162.0" layoutY="163.0" prefHeight="17.0" prefWidth="261.0" textFill="RED" />
+            <Label fx:id="lblEmail" layoutX="162.0" layoutY="249.0" prefHeight="17.0" prefWidth="261.0" textFill="RED" />
+            <Label fx:id="lblAddress" layoutX="162.0" layoutY="341.0" prefHeight="17.0" prefWidth="261.0" textFill="RED" />
+            <Label fx:id="lblTeleNum" layoutX="165.0" layoutY="428.0" prefHeight="17.0" prefWidth="261.0" textFill="RED" />
+         </children>
+         <opaqueInsets>
+            <Insets right="100.0" top="100.0" />
+         </opaqueInsets>
+      </AnchorPane>
+      <ImageView fitHeight="49.0" fitWidth="48.0" layoutX="834.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/AddNewBookIcons/icons8_Student_Male_100px.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="815.0" layoutY="68.0" prefHeight="56.0" prefWidth="324.0" text="               Manage  Member" textFill="#eb4a07" underline="true">
+         <font>
+            <Font name="Bodoni MT" size="29.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="259.0" fitWidth="273.0" layoutX="454.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/icons/signup-library-icon.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="1294.0" layoutY="-1.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #f41f43;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tableView" layoutX="454.0" layoutY="258.0" prefHeight="400.0" prefWidth="909.0">
+         <columns>
+            <TableColumn fx:id="colMemId" prefWidth="76.0" text="Member Id" />
+            <TableColumn fx:id="colMemName" prefWidth="133.0" text="Name" />
+            <TableColumn fx:id="colMemEmail" prefWidth="202.0" text="Email" />
+            <TableColumn fx:id="colAddress" prefWidth="172.0" text="Address" />
+            <TableColumn fx:id="colTeleNum" prefWidth="120.0" text="Tele_Num" />
+            <TableColumn fx:id="colRegiDate" minWidth="0.0" prefWidth="106.0" text="Registered Date" />
+            <TableColumn fx:id="colRegiBy" prefWidth="98.0" text="Registered By" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

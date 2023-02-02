@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="699.0" prefWidth="1370.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.library.controller.VeiwAllRecordFormController">
+   <children>
+      <AnchorPane prefHeight="236.0" prefWidth="1370.0" style="-fx-background-color: #c0b5e1;">
+         <children>
+            <ImageView fitHeight="61.0" fitWidth="59.0" layoutX="565.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/AddNewBookIcons/icons8_Literature_100px_1.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="636.0" layoutY="29.0" prefHeight="30.0" prefWidth="223.0" text="Veiw All Record" textFill="#b5059e">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="552.0" layoutY="71.0" prefHeight="2.0" prefWidth="299.0" style="-fx-background-color: white;" />
+            <Label layoutX="187.0" layoutY="127.0" prefHeight="25.0" prefWidth="92.0" text="Issue Date :" textFill="WHITE">
+               <font>
+                  <Font name="HoloLens MDL2 Assets" size="14.0" />
+               </font>
+            </Label>
+            <JFXDatePicker fx:id="txtissueDate" defaultColor="#910096" layoutX="279.0" layoutY="127.0" onKeyPressed="#issueDateOnKeyPress" prefHeight="25.0" prefWidth="194.0" promptText="Select Issue Date" />
+            <Label layoutX="620.0" layoutY="127.0" prefHeight="25.0" prefWidth="92.0" text="Issue Date :" textFill="WHITE">
+               <font>
+                  <Font name="HoloLens MDL2 Assets" size="14.0" />
+               </font>
+            </Label>
+            <JFXDatePicker fx:id="txtdueDate" defaultColor="#910096" layoutX="705.0" layoutY="127.0" prefHeight="25.0" prefWidth="194.0" promptText="Select Issue Date" />
+            <Button layoutX="1037.0" layoutY="125.0" mnemonicParsing="false" onAction="#btnSearchOnAction" prefHeight="15.0" prefWidth="69.0" style="-fx-background-color: red;" text="Search" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Button>
+            <Button layoutX="1287.0" layoutY="-1.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="29.0" prefWidth="83.0" style="-fx-background-color: red;" text="Back" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="1184.0" layoutY="125.0" mnemonicParsing="false" onAction="#btnAllOnAction" prefHeight="15.0" prefWidth="69.0" style="-fx-background-color: #6a39d3;" text="All" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tableView" layoutX="460.0" layoutY="290.0" prefHeight="329.0" prefWidth="848.0">
+        <columns>
+          <TableColumn fx:id="colIssueId" prefWidth="109.0" text="Issue Id" />
+          <TableColumn fx:id="colBookId" prefWidth="127.0" text="Book ID" />
+            <TableColumn fx:id="colMemberId" prefWidth="144.0" text="Member Id" />
+            <TableColumn fx:id="colIssuDate" prefWidth="171.0" text="Issue Date" />
+            <TableColumn fx:id="colDueDate" prefWidth="161.0" text="Due Date" />
+            <TableColumn fx:id="colStatus" prefWidth="135.0" text="Status" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="289.0" fitWidth="460.0" layoutX="14.0" layoutY="290.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/icons/undraw_building_websites_i78t.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

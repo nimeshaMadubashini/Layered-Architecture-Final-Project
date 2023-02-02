@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="699.0" prefWidth="1370.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.library.controller.DashBoardFormController">
+   <children>
+      <ImageView fitHeight="439.0" fitWidth="411.0" layoutX="335.0" layoutY="274.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/image/g.png" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="53.0" prefWidth="1370.0" style="-fx-background-color: #1CB5E0;">
+         <children>
+            <ImageView fitHeight="48.0" fitWidth="40.0" layoutX="14.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/adminIcons/icons8_Library_32px.png" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="62.0" layoutY="4.0" prefHeight="40.0" prefWidth="5.0" style="-fx-background-color: #455A64;" />
+            <Label layoutX="899.0" layoutY="7.0" prefHeight="41.0" prefWidth="92.0" text="Welcome," textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="41.0" fitWidth="40.0" layoutX="859.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/adminIcons/male_user_50px.png" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="1259.0" layoutY="10.0" prefHeight="29.0" prefWidth="97.0" style="-fx-background-color: white;" />
+            <JFXTextField fx:id="txtlibrarian" layoutX="980.0" layoutY="18.0" prefHeight="25.0" prefWidth="147.0" unFocusColor="#52b1c9" />
+            <JFXButton layoutX="1259.0" layoutY="10.0" onAction="#btnLogOutOnAction" prefHeight="29.0" prefWidth="67.0" text="Log Out" textFill="RED">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="21.0" fitWidth="29.0" layoutX="1331.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/adminIcons/icons8_Exit_26px.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="txtDateTime" layoutX="105.0" layoutY="3.0" prefHeight="30.0" prefWidth="325.0" unFocusColor="#1cb5e0">
+               <font>
+                  <Font name="Bodoni MT Condensed Bold" size="22.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="53.0" prefHeight="647.0" prefWidth="298.0" style="-fx-background-color: #2C5364;">
+         <children>
+            <Label layoutX="8.0" layoutY="1.0" prefHeight="25.0" prefWidth="141.0" text="Features" textFill="WHITE">
+               <font>
+                  <Font name="HoloLens MDL2 Assets" size="16.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="67.0" layoutY="35.0" onAction="#manageMemberOnAction" prefHeight="30.0" prefWidth="141.0" text="Manage Members" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="43.0" layoutY="109.0" onAction="#manageBookOnAction" prefHeight="30.0" prefWidth="148.0" text="Manage Book" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="35.0" layoutY="185.0" onAction="#bookIssueOnAction" prefHeight="30.0" prefWidth="154.0" text="Book  Issue" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="42.0" layoutY="222.0" onAction="#bookReturnOnAction" prefHeight="30.0" prefWidth="141.0" text="Book  Return" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="57.0" layoutY="265.0" onAction="#viewAllRecordOnAction" prefHeight="30.0" prefWidth="240.0" text="View Record issue and return Book" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="31.0" layoutY="394.0" onAction="#manageGranterOnAction" prefHeight="30.0" prefWidth="170.0" text="Manage Granter" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="54.0" layoutY="536.0" onAction="#financialOnAction" prefHeight="30.0" prefWidth="84.0" text="Financial" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="52.0" layoutY="572.0" onAction="#sendEmailOnAction" prefHeight="30.0" prefWidth="97.0" text="Send Email" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="39.0" layoutY="491.0" onAction="#manageNewspprOnAction" prefHeight="30.0" prefWidth="170.0" text="Manage NewsPaper" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="21.0" fitWidth="29.0" layoutX="36.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/AddNewBookIcons/icons8_Moleskine_26px.png" />
+               </image>
+               <effect>
+                  <Lighting diffuseConstant="2.0">
+                     <light>
+                        <Light.Distant />
+                     </light>
+                     <bumpInput>
+                        <ColorAdjust brightness="1.0" contrast="-0.47" hue="0.7" saturation="1.0" />
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="21.0" fitWidth="29.0" layoutX="36.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons/icons8-member-64.png" />
+               </image>
+               <effect>
+                  <Lighting diffuseConstant="2.0">
+                     <light>
+                        <Light.Distant />
+                     </light>
+                     <bumpInput>
+                        <ColorAdjust brightness="1.0" contrast="-0.47" hue="0.7" saturation="1.0" />
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="21.0" fitWidth="29.0" layoutX="31.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons/icons8-borrow-book-64.png" />
+               </image>
+               <effect>
+                  <Lighting diffuseConstant="2.0">
+                     <light>
+                        <Light.Distant />
+                     </light>
+                     <bumpInput>
+                        <ColorAdjust brightness="1.0" contrast="-0.47" hue="0.7" saturation="1.0" />
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="21.0" fitWidth="29.0" layoutX="31.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons/icons8-return-book-64.png" />
+               </image>
+               <effect>
+                  <Lighting diffuseConstant="2.0">
+                     <light>
+                        <Light.Distant />
+                     </light>
+                     <bumpInput>
+                        <ColorAdjust brightness="1.0" contrast="-0.47" hue="0.7" saturation="1.0" />
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="21.0" fitWidth="29.0" layoutX="31.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons/icons8-study-64.png" />
+               </image>
+               <effect>
+                  <Lighting diffuseConstant="2.0">
+                     <light>
+                        <Light.Distant />
+                     </light>
+                     <bumpInput>
+                        <ColorAdjust brightness="1.0" contrast="-0.47" hue="0.7" saturation="1.0" />
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="21.0" fitWidth="29.0" layoutX="29.0" layoutY="399.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons/icons8-supplier-50.png" />
+               </image>
+               <effect>
+                  <Lighting diffuseConstant="2.0">
+                     <light>
+                        <Light.Distant />
+                     </light>
+                     <bumpInput>
+                        <ColorAdjust brightness="1.0" contrast="-0.47" hue="0.7" saturation="1.0" />
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="21.0" fitWidth="29.0" layoutX="29.0" layoutY="495.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons/icons8-newspaper-64%20(1).png" />
+               </image>
+               <effect>
+                  <Lighting diffuseConstant="2.0">
+                     <light>
+                        <Light.Distant />
+                     </light>
+                     <bumpInput>
+                        <ColorAdjust brightness="1.0" contrast="-0.47" hue="0.7" saturation="1.0" />
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="21.0" fitWidth="29.0" layoutX="29.0" layoutY="541.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons/icons8-financial-analytics-50.png" />
+               </image>
+               <effect>
+                  <Lighting diffuseConstant="2.0" specularConstant="1.84">
+                     <light>
+                        <Light.Distant />
+                     </light>
+                     <bumpInput>
+                        <ColorAdjust brightness="1.0" contrast="-0.47" hue="0.7" saturation="1.0" />
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="21.0" fitWidth="29.0" layoutX="29.0" layoutY="577.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons/icons8_Secured_Letter_50px.png" />
+               </image>
+               <effect>
+                  <Lighting diffuseConstant="2.0" specularConstant="1.84">
+                     <light>
+                        <Light.Distant />
+                     </light>
+                     <bumpInput>
+                        <ColorAdjust brightness="1.0" contrast="-0.47" hue="0.7" saturation="1.0" />
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+            </ImageView>
+            <JFXButton layoutX="64.0" layoutY="74.0" onAction="#manageBookCategoryOnAction" prefHeight="29.0" prefWidth="170.0" text="Manage Book Category" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="21.0" fitWidth="29.0" layoutX="36.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons/icons8-library-25.png" />
+               </image>
+               <effect>
+                  <Lighting diffuseConstant="2.0">
+                     <light>
+                        <Light.Distant />
+                     </light>
+                     <bumpInput>
+                        <ColorAdjust brightness="1.0" contrast="-0.47" hue="0.7" saturation="1.0" />
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+            </ImageView>
+            <JFXButton layoutX="45.0" layoutY="443.0" onAction="#btnmanageBookSublyDetailOnAction" prefHeight="30.0" prefWidth="210.0" text="Manage Book Supply Details" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="29.0" layoutY="448.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons/icons8-add-book-50.png" />
+               </image>
+               <effect>
+                  <Lighting diffuseConstant="2.0">
+                     <light>
+                        <Light.Distant />
+                     </light>
+                     <bumpInput>
+                        <ColorAdjust brightness="1.0" contrast="-0.47" hue="0.7" saturation="1.0" />
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+            </ImageView>
+            <JFXButton layoutX="52.0" layoutY="612.0" onAction="#btnReportOnAction" prefHeight="21.0" prefWidth="97.0" text="Report" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="21.0" fitWidth="29.0" layoutX="29.0" layoutY="616.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons/icons8-report-file-64%20(1).png" />
+               </image>
+               <effect>
+                  <Lighting diffuseConstant="2.0" specularConstant="1.84">
+                     <light>
+                        <Light.Distant />
+                     </light>
+                     <bumpInput>
+                        <ColorAdjust brightness="1.0" contrast="-0.47" hue="0.7" saturation="1.0" />
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+            </ImageView>
+            <JFXButton layoutX="20.0" layoutY="309.0" onAction="#veiwIssieBookRecordOnAction" prefHeight="30.0" prefWidth="193.0" text="View Issue Book" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="27.0" layoutY="345.0" onAction="#viewDefaulterOnAction" prefHeight="40.0" prefWidth="193.0" text="View Defaulter List" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="21.0" fitWidth="29.0" layoutX="31.0" layoutY="313.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons/icons8-study-64.png" />
+               </image>
+               <effect>
+                  <Lighting diffuseConstant="2.0">
+                     <light>
+                        <Light.Distant />
+                     </light>
+                     <bumpInput>
+                        <ColorAdjust brightness="1.0" contrast="-0.47" hue="0.7" saturation="1.0" />
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="21.0" fitWidth="29.0" layoutX="31.0" layoutY="355.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons/icons8-study-64.png" />
+               </image>
+               <effect>
+                  <Lighting diffuseConstant="2.0">
+                     <light>
+                        <Light.Distant />
+                     </light>
+                     <bumpInput>
+                        <ColorAdjust brightness="1.0" contrast="-0.47" hue="0.7" saturation="1.0" />
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+            </ImageView>
+            <JFXButton layoutX="42.0" layoutY="149.0" onAction="#SearchBookOnAction" prefHeight="30.0" prefWidth="148.0" text="Search Book" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="21.0" fitWidth="29.0" layoutX="36.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/AddNewBookIcons/icons8_Moleskine_26px.png" />
+               </image>
+               <effect>
+                  <Lighting diffuseConstant="2.0">
+                     <light>
+                        <Light.Distant />
+                     </light>
+                     <bumpInput>
+                        <ColorAdjust brightness="1.0" contrast="-0.47" hue="0.7" saturation="1.0" />
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="371.0" layoutY="124.0" prefHeight="130.0" prefWidth="193.0" style="-fx-background-color: #F0F0F0;">
+         <children>
+            <AnchorPane layoutY="-1.0" prefHeight="13.0" prefWidth="193.0" style="-fx-background-color: #C27BA0;" />
+            <ImageView fitHeight="51.0" fitWidth="46.0" layoutX="37.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/adminIcons/icons8_People_50px.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblMember" layoutX="97.0" layoutY="48.0" prefHeight="41.0" prefWidth="60.0" text="10" textFill="#7c7676">
+               <font>
+                  <Font name="System Bold" size="41.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Text fill="#bf13a0" layoutX="377.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" No of Members" wrappingWidth="180.13671875">
+         <font>
+            <Font name="Bell MT" size="20.0" />
+         </font>
+      </Text>
+      <AnchorPane layoutX="630.0" layoutY="124.0" prefHeight="130.0" prefWidth="193.0" style="-fx-background-color: #F0F0F0;">
+         <children>
+            <AnchorPane layoutY="-1.0" prefHeight="13.0" prefWidth="193.0" style="-fx-background-color: #ed7575;" />
+            <ImageView fitHeight="51.0" fitWidth="46.0" layoutX="37.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/adminIcons/icons8_Book_Shelf_50px.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblBookId" layoutX="97.0" layoutY="46.0" prefHeight="59.0" prefWidth="84.0" text="10" textFill="#7c7676">
+               <font>
+                  <Font name="System Bold" size="41.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Text fill="#e83f58" layoutX="643.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" No of  Book" wrappingWidth="180.13671875">
+         <font>
+            <Font name="Bell MT" size="20.0" />
+         </font>
+      </Text>
+      <AnchorPane layoutX="887.0" layoutY="124.0" prefHeight="130.0" prefWidth="193.0" style="-fx-background-color: #F0F0F0;">
+         <children>
+            <AnchorPane layoutY="-1.0" prefHeight="13.0" prefWidth="193.0" style="-fx-background-color: #b4a7d6;" />
+            <ImageView fitHeight="40.0" fitWidth="46.0" layoutX="37.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/adminIcons/icons8_Sell_50px.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblIssueBook" layoutX="97.0" layoutY="46.0" prefHeight="41.0" prefWidth="60.0" text="10" textFill="#7c7676">
+               <font>
+                  <Font name="System Bold" size="41.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Text fill="#373ca1" layoutX="887.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Issue Book" wrappingWidth="180.13671875">
+         <font>
+            <Font name="Bell MT" size="20.0" />
+         </font>
+      </Text>
+      <AnchorPane layoutX="1141.0" layoutY="124.0" prefHeight="130.0" prefWidth="193.0" style="-fx-background-color: #F0F0F0;">
+         <children>
+            <AnchorPane layoutY="-1.0" prefHeight="13.0" prefWidth="193.0" style="-fx-background-color: #8aed5f;" />
+            <ImageView fitHeight="40.0" fitWidth="46.0" layoutX="37.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/adminIcons/icons8_List_of_Thumbnails_50px.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblDefaulterList" layoutX="97.0" layoutY="46.0" prefHeight="41.0" prefWidth="60.0" text="10" textFill="#7c7676">
+               <font>
+                  <Font name="System Bold" size="41.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Text fill="#22a827" layoutX="1141.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Defaulter List" wrappingWidth="180.13671875">
+         <font>
+            <Font name="Bell MT" size="20.0" />
+         </font>
+      </Text>
+      <PieChart fx:id="pieChart" layoutX="797.0" layoutY="282.0" prefHeight="403.0" prefWidth="558.0" title="Issue  Book  Details" />
+   </children>
+</AnchorPane>

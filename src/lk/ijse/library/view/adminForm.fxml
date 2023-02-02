@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="699.0" prefWidth="1370.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.library.controller.AdminFormController">
+   <children>
+      <ImageView fitHeight="562.0" fitWidth="546.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/image/17.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="690.0" fitWidth="397.0" layoutX="981.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/image/26.png" />
+         </image>
+      </ImageView>
+      <Label contentDisplay="TOP" layoutX="247.0" layoutY="28.0" prefHeight="66.0" prefWidth="818.0" text="Welcome To Library Management System" textFill="#211f22">
+         <font>
+            <Font name="Modern No. 20" size="46.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="648.0" layoutY="262.0" onAction="#btnAdminOnAction" prefHeight="50.0" prefWidth="259.0" style="-fx-background-color: #1c92d2;" text="Admin" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="50.0" fitWidth="48.0" layoutX="663.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/icons/icons8-admin-64%20(1).png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="648.0" layoutY="442.0" onAction="#btnLibrarianOnAction" prefHeight="50.0" prefWidth="259.0" style="-fx-background-color: linear-gradient(to right, #06beb6, #48b1bf);;" text="Librian" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="50.0" fitWidth="48.0" layoutX="663.0" layoutY="443.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/icons/icons8-librarian-64.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

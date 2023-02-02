@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="699.0" prefWidth="1370.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.library.controller.manageOtherExpenditureformController">
+   <children>
+      <AnchorPane layoutX="-1.0" prefHeight="699.0" prefWidth="400.0" style="-fx-background-color: #12c2e9;">
+         <children>
+            <JFXTextField fx:id="txtExpenditureId" layoutX="62.0" layoutY="91.0" onKeyPressed="#idOnKeyPress" prefHeight="25.0" prefWidth="244.0" promptText="Enter Member Id" />
+            <JFXTextField fx:id="txtDescription" layoutX="62.0" layoutY="198.0" onKeyPressed="#descOnKeyPress" prefHeight="25.0" prefWidth="244.0" promptText="Enter Month Payment" />
+            <Label layoutX="62.0" layoutY="66.0" prefHeight="25.0" prefWidth="155.0" text="Expenditure Id" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="62.0" layoutY="385.0" prefHeight="25.0" prefWidth="146.0" text="Date" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="62.0" layoutY="273.0" prefHeight="25.0" prefWidth="146.0" text="Amount  Rs:" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button layoutX="127.0" layoutY="496.0" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="25.0" prefWidth="127.0" style="-fx-background-color: red;" text="Add" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="129.0" layoutY="558.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="25.0" prefWidth="127.0" style="-fx-background-color: red;" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="131.0" layoutY="613.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="25.0" prefWidth="127.0" style="-fx-background-color: red;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="27.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/AddNewBookIcons/icons8_Contact_26px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="30.0" layoutX="27.0" layoutY="413.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons/icons8-calendar-64.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="30.0" layoutX="27.0" layoutY="303.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons/icons8-financial-32.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="30.0" layoutX="27.0" layoutY="198.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/adminIcons/icons8_menu_48px_1.png" />
+               </image>
+            </ImageView>
+            <JFXDatePicker fx:id="txtDate" defaultColor="#1807f0" layoutX="62.0" layoutY="413.0" prefHeight="25.0" prefWidth="244.0" promptText="Select Date" />
+            <Label layoutX="62.0" layoutY="168.0" prefHeight="25.0" prefWidth="146.0" text="Discription" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtAmount" layoutX="62.0" layoutY="303.0" onKeyPressed="#amountOnKeyPress" prefHeight="25.0" prefWidth="244.0" promptText="Enter Amount" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tableView" layoutX="598.0" layoutY="273.0" prefHeight="355.0" prefWidth="634.0">
+         <columns>
+            <TableColumn fx:id="colExpenditureId" prefWidth="104.0" text="Expenditure Id" />
+            <TableColumn fx:id="colDescription" prefWidth="227.0" text="Description" />
+            <TableColumn fx:id="colAmount" prefWidth="94.0" text="Amount  RS:" />
+            <TableColumn fx:id="colDate" prefWidth="122.0" text=" Date" />
+            <TableColumn fx:id="colAddBy" prefWidth="86.0" text="Add  By" />
+            <TableColumn fx:id="colDate1" prefWidth="122.0" text=" Date" />
+         </columns>
+      </TableView>
+      <ImageView fitHeight="61.0" fitWidth="59.0" layoutX="683.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/icons/icons8-expenditure-64.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="748.0" layoutY="90.0" prefHeight="31.0" prefWidth="355.0" text="Manage Other Expenditures" textFill="#ed340c">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="26.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="670.0" layoutY="133.0" prefHeight="4.0" prefWidth="446.0" style="-fx-background-color: #ed340c;" />
+      <Button layoutX="1297.0" layoutY="-1.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="30.0" prefWidth="73.0" style="-fx-background-color: red;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="254.0" fitWidth="267.0" layoutX="401.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/image/5.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

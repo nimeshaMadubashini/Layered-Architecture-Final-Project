@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="699.0" prefWidth="1370.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.library.controller.FinancialFormController">
+   <children>
+      <AnchorPane layoutY="-1.0" prefHeight="699.0" prefWidth="335.0" style="-fx-background-color: #6DD5FA;">
+         <children>
+            <JFXButton layoutX="67.0" layoutY="251.0" onAction="#btnMemberFeesOnAction" prefHeight="39.0" prefWidth="201.0" text="Member Fees" textFill="#1b0d0d">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="67.0" layoutY="389.0" onAction="#btnInsurenceOnAction" prefHeight="39.0" prefWidth="178.0" text="Insurance" textFill="#220101">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="82.0" layoutY="533.0" onAction="#btnOtherExpenditureOnAction" prefHeight="39.0" prefWidth="209.0" text="Other Expenditure" textFill="#140101">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <AnchorPane prefHeight="123.0" prefWidth="335.0" style="-fx-background-color: #0575E6;">
+               <children>
+                  <Label layoutX="51.0" layoutY="32.0" prefHeight="60.0" prefWidth="194.0" text="      Financial" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="30.0" fitWidth="32.0" layoutX="67.0" layoutY="538.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons/icons8-financial-68.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="32.0" layoutX="67.0" layoutY="393.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons/icons8-insurance-agent-48.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="67.0" layoutY="256.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons/icons8-financial-32.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="632.0" fitWidth="630.0" layoutX="562.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/image/96.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="519.0" layoutY="34.0" prefHeight="39.0" prefWidth="559.0" text="Manage  Library  Financial  Information  " textFill="#f55921">
+         <font>
+            <Font name="Bell MT Bold" size="30.0" />
+         </font>
+      </Label>
+      <Button layoutX="1298.0" layoutY="-1.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="30.0" prefWidth="72.0" style="-fx-background-color: red;" text="Back" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="65.0" fitWidth="60.0" layoutX="452.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/icons/icons8-bill-64.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

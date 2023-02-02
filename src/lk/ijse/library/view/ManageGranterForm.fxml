@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="699.0" prefWidth="1370.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.library.controller.ManageGranterFormController">
+   <children>
+      <TableView fx:id="tableView" layoutX="490.0" layoutY="215.0" prefHeight="472.0" prefWidth="756.0">
+         <columns>
+            <TableColumn fx:id="colGranterId" prefWidth="83.0" text="Granter Id" />
+            <TableColumn fx:id="colName" prefWidth="197.0" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="251.0" text="Address" />
+            <TableColumn fx:id="colTeleNum" prefWidth="124.0" text="Telephone Num" />
+            <TableColumn fx:id="colAddBy" prefWidth="100.0" text="Add By" />
+         </columns>
+      </TableView>
+      <ImageView fitHeight="61.0" fitWidth="59.0" layoutX="765.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/icons/icons8-premium-bookseller-isolated-on-a-white-background-48.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="824.0" layoutY="71.0" prefHeight="54.0" prefWidth="381.0" text="Manage Granters" textFill="#ed340c">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="35.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="752.0" layoutY="126.0" prefHeight="4.0" prefWidth="381.0" style="-fx-background-color: #ed340c;" />
+      <Button layoutX="1301.0" layoutY="-1.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="30.0" prefWidth="69.0" style="-fx-background-color: red;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="218.0" fitWidth="337.0" layoutX="376.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/image/16.png" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="699.0" prefWidth="392.0" style="-fx-background-color: #fbdcbd;">
+         <children>
+            <JFXTextField fx:id="txtGranterId" layoutX="92.0" layoutY="109.0" onKeyPressed="#idOnKeyPress" onKeyReleased="#idOnKeyReleased" prefHeight="25.0" prefWidth="244.0" promptText="Enter  Granter Id" />
+            <JFXTextField fx:id="txtName" layoutX="88.0" layoutY="216.0" onKeyPressed="#nameOnkeyPress" onKeyReleased="#nameOnkeyRelease" prefHeight="25.0" prefWidth="253.0" promptText="Enter Granter Name" />
+            <JFXTextField fx:id="txtAddress" layoutX="88.0" layoutY="317.0" onKeyPressed="#addOnKeyPress" onKeyReleased="#addOnKeyRelese" prefHeight="25.0" prefWidth="253.0" promptText="Enter Address " />
+            <JFXTextField fx:id="txtTeleNum" layoutX="86.0" layoutY="425.0" onKeyPressed="#teleOnKeyPress" onKeyReleased="#teleOnKeyRelease" prefHeight="25.0" prefWidth="253.0" promptText="Enter TelePhone  Num" />
+            <Label layoutX="90.0" layoutY="84.0" prefHeight="25.0" prefWidth="146.0" text="Granter Id" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="86.0" layoutY="191.0" prefHeight="25.0" prefWidth="155.0" text="Name" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="86.0" layoutY="292.0" prefHeight="25.0" prefWidth="138.0" text="Address" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="82.0" layoutY="394.0" prefHeight="25.0" prefWidth="146.0" text="TelePhone Num" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button layoutX="141.0" layoutY="510.0" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="25.0" prefWidth="146.0" style="-fx-background-color: red;" text="Add" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="141.0" layoutY="576.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="25.0" prefWidth="146.0" style="-fx-background-color: red;" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="141.0" layoutY="634.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="25.0" prefWidth="146.0" style="-fx-background-color: red;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="46.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/AddNewBookIcons/icons8_Contact_26px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="46.0" layoutY="317.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/adminIcons/icons8_Home_26px_2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="30.0" layoutX="46.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons/icons8-supplier-50.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="46.0" layoutY="425.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons/icons8_Google_Mobile_50px.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lbIdWarning" layoutX="92.0" layoutY="134.0" prefHeight="17.0" prefWidth="244.0" textFill="RED" />
+            <Label fx:id="lbNameWarning" layoutX="86.0" layoutY="241.0" prefHeight="17.0" prefWidth="253.0" textFill="RED" />
+            <Label fx:id="lbAddressWarning" layoutX="86.0" layoutY="341.0" prefHeight="17.0" prefWidth="253.0" textFill="RED" />
+            <Label fx:id="lblTeleNumWarning" layoutX="86.0" layoutY="450.0" prefHeight="17.0" prefWidth="253.0" textFill="RED" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="699.0" prefWidth="1370.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.library.controller.ManageBookCategoryFormController">
+   <children>
+      <ImageView fitHeight="537.0" fitWidth="431.0" layoutY="166.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/image/31.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="432.0" layoutY="14.0" prefHeight="685.0" prefWidth="365.0" style="-fx-background-color: #97c0e5;">
+         <children>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="40.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/AddNewBookIcons/icons8_Contact_26px.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="txtCategoryId" layoutX="75.0" layoutY="131.0" onKeyPressed="#ctgryIdOnKeyPress" prefHeight="25.0" prefWidth="244.0" promptText="Enter Category Id" />
+            <Label layoutX="82.0" layoutY="95.0" prefHeight="25.0" prefWidth="146.0" text="Category Id" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="75.0" layoutY="294.0" prefHeight="25.0" prefWidth="146.0" text="Type" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtCategoryType" layoutX="75.0" layoutY="330.0" prefHeight="25.0" prefWidth="244.0" promptText="Enter Category Type" />
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="40.0" layoutY="330.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons/icons8-library-25.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="91.0" layoutY="473.0" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="25.0" prefWidth="146.0" style="-fx-background-color: #ff2e1f;" text="Add" textFill="WHITE" />
+            <Button layoutX="91.0" layoutY="606.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="25.0" prefWidth="146.0" style="-fx-background-color: #ff2e1f;" text="Delete" textFill="WHITE" />
+            <Button layoutX="91.0" layoutY="537.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="25.0" prefWidth="146.0" style="-fx-background-color: #ff2e1f;" text="Update" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tableview" layoutX="835.0" layoutY="201.0" prefHeight="403.0" prefWidth="468.0">
+        <columns>
+          <TableColumn fx:id="colCategoryId" prefWidth="96.0" text="Category Id" />
+          <TableColumn fx:id="colType" prefWidth="262.0" text="Type" />
+            <TableColumn fx:id="colQty" prefWidth="109.0" text="QTY" />
+        </columns>
+      </TableView>
+      <Label layoutX="913.0" layoutY="85.0" prefHeight="36.0" prefWidth="365.0" text="Manage Book Category" textFill="#eb730e">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="30.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="847.0" layoutY="125.0" prefHeight="5.0" prefWidth="414.0" style="-fx-background-color: #ed340c;" />
+      <Button layoutX="1294.0" layoutY="-1.0" mnemonicParsing="false" onAction="#btnackOnAction" prefHeight="30.0" prefWidth="76.0" style="-fx-background-color: red;" text="Back" textFill="WHITE" />
+      <ImageView fitHeight="62.0" fitWidth="66.0" layoutX="847.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/icons/icons8-book-shelf-64.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

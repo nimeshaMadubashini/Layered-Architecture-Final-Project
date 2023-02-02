@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="699.0" prefWidth="1370.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.library.controller.ManageBookFormController">
+   <children>
+      <AnchorPane prefHeight="699.0" prefWidth="397.0" style="-fx-background-color: #97c0e5;">
+         <children>
+            <JFXTextField fx:id="txtBookId" layoutX="148.0" layoutY="20.0" onKeyPressed="#memIdOnKeyPress" onKeyReleased="#memIdOnKeyRelesed" prefHeight="25.0" prefWidth="226.0" promptText="Enter  Book Id">
+               <font>
+                  <Font size="13.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="txtAuthor" layoutX="148.0" layoutY="151.0" onKeyPressed="#authorOnKeyPress" onKeyReleased="#authorOnKeyRelease" prefHeight="25.0" prefWidth="226.0" promptText="Enter Author Name">
+               <font>
+                  <Font size="13.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="txtBookName" layoutX="148.0" layoutY="85.0" onKeyPressed="#nameOnKeyPress" onKeyReleased="#nameOnKeyRelese" prefHeight="25.0" prefWidth="226.0" promptText="Enter Book Name">
+               <font>
+                  <Font size="13.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="txtNumOfPage" layoutX="146.0" layoutY="485.0" onKeyPressed="#pageOnKeyPress" onKeyReleased="#pageOnKeyRelese" prefHeight="25.0" prefWidth="226.0" promptText="Enter Num Of Page">
+               <font>
+                  <Font size="13.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="txtShelfNo" layoutX="148.0" layoutY="420.0" onKeyPressed="#shelfIdOnKeyPress" onKeyReleased="#shelfIdOnKeyRelese" prefHeight="25.0" prefWidth="226.0" promptText="Enter Shelf Number ">
+               <font>
+                  <Font size="13.0" />
+               </font></JFXTextField>
+            <Label layoutX="41.0" layoutY="24.0" prefHeight="25.0" prefWidth="101.0" text="Book Id           :" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="20.0" fitWidth="25.0" layoutX="10.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/AddNewBookIcons/icons8_Contact_26px.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="38.0" layoutY="89.0" prefHeight="25.0" prefWidth="101.0" text="Book Name     :" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="149.0" prefHeight="34.0" prefWidth="101.0" text="Author             :" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="33.0" layoutY="484.0" prefHeight="25.0" prefWidth="107.0" text="Num Of Page   :" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="34.0" layoutY="421.0" prefHeight="25.0" prefWidth="107.0" text="Shelf_Number    :" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="561.0" prefHeight="25.0" prefWidth="107.0" text=" Category  Id     :" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button layoutX="20.0" layoutY="644.0" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="25.0" prefWidth="59.0" style="-fx-background-color: red;" text="Add" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="121.0" layoutY="644.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="25.0" prefWidth="59.0" style="-fx-background-color: red;" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="218.0" layoutY="644.0" mnemonicParsing="false" onAction="#btnSearchOnAction" prefHeight="25.0" prefWidth="59.0" style="-fx-background-color: red;" text="Search" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="309.0" layoutY="644.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="25.0" prefWidth="59.0" style="-fx-background-color: red;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="10.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/AddNewBookIcons/icons8_Moleskine_26px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="10.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/AddNewBookIcons/icons8_Collaborator_Male_26px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="10.0" layoutY="362.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/AddNewBookIcons/icons8_Unit_26px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="20.0" fitWidth="18.0" layoutX="10.0" layoutY="487.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/AddNewBookIcons/icons8_Literature_100px_1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="10.0" layoutY="563.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons/icons8-library-25.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="22.0" fitWidth="25.0" layoutX="9.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/adminIcons/icons8-id-48.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="txtIsbn" layoutX="148.0" layoutY="219.0" onKeyPressed="#isbnOnKeyPrsse" onKeyReleased="#isbnOnKeyRelease" prefHeight="25.0" prefWidth="226.0" promptText="Enter ISBN Number">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="38.0" layoutY="225.0" prefHeight="25.0" prefWidth="101.0" text="ISBN No          :" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtPublisher" layoutX="148.0" layoutY="287.0" onKeyPressed="#publisherOnKeyPress" onKeyReleased="#publisherOnKeyRelease" prefHeight="25.0" prefWidth="226.0" promptText="Enter Publisher">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="35.0" layoutY="287.0" prefHeight="25.0" prefWidth="107.0" text="Publisher          :" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="35.0" layoutY="360.0" prefHeight="25.0" prefWidth="126.0" text="QTY On Hand     :" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtQtyOnHand" layoutX="146.0" layoutY="354.0" onKeyPressed="#qtuOnKeyPrss" onKeyReleased="#qtyOnKeyrelese" prefHeight="22.0" prefWidth="226.0" promptText="Enter Qty On Hand">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXTextField>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="10.0" layoutY="423.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons/icons8-library-64.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="10.0" layoutY="290.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons/icons8-member-64.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblBookId" layoutX="147.0" layoutY="49.0" prefHeight="17.0" prefWidth="226.0" textFill="RED" />
+            <Label fx:id="lblBookName" layoutX="147.0" layoutY="114.0" prefHeight="17.0" prefWidth="226.0" textFill="RED" />
+            <Label fx:id="lblAuthor" layoutX="147.0" layoutY="180.0" prefHeight="17.0" prefWidth="226.0" textFill="RED" />
+            <Label fx:id="lblIsbn" layoutX="146.0" layoutY="250.0" prefHeight="17.0" prefWidth="226.0" textFill="RED" />
+            <Label fx:id="lblPublisher" layoutX="146.0" layoutY="318.0" prefHeight="17.0" prefWidth="226.0" textFill="RED" />
+            <Label fx:id="lblQtyOnHand" layoutX="147.0" layoutY="385.0" prefHeight="17.0" prefWidth="226.0" textFill="RED" />
+            <Label fx:id="lblShelNo" layoutX="147.0" layoutY="448.0" prefHeight="17.0" prefWidth="226.0" textFill="RED" />
+            <Label fx:id="lblNumOfPage" layoutX="147.0" layoutY="514.0" prefHeight="17.0" prefWidth="226.0" textFill="RED" />
+            <Label fx:id="lblCatgry" layoutX="147.0" layoutY="586.0" prefHeight="17.0" prefWidth="226.0" textFill="RED" />
+            <JFXComboBox fx:id="txtCategoryId" layoutX="146.0" layoutY="561.0" prefHeight="25.0" prefWidth="226.0" promptText="Select Category" />
+         </children></AnchorPane>
+      <TableView fx:id="tableView" layoutX="409.0" layoutY="256.0" prefHeight="401.0" prefWidth="943.0">
+        <columns>
+          <TableColumn fx:id="cokBookId" prefWidth="75.0" text="Book Id" />
+          <TableColumn fx:id="colBookName" prefWidth="133.0" text="Name" />
+            <TableColumn fx:id="colAuthor" prefWidth="126.0" text="Author" />
+            <TableColumn fx:id="colISBN" prefWidth="94.0" text="ISBN_No" />
+            <TableColumn fx:id="colPublisher" prefWidth="127.0" text="Publisher" />
+            <TableColumn fx:id="colQtyOnhand" prefWidth="83.0" text="Qty_On_Hand" />
+            <TableColumn fx:id="colShelfNo" prefWidth="68.0" text="Shelf_No" />
+            <TableColumn fx:id="colNumOfPage1" prefWidth="85.0" text="Num_Of_Page" />
+            <TableColumn fx:id="colAddBy" prefWidth="70.0" text="Add By" />
+            <TableColumn fx:id="colCategoryId" prefWidth="81.0" text="Category Id" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="61.0" fitWidth="59.0" layoutX="815.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/AddNewBookIcons/icons8_Books_52px_1.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="880.0" layoutY="89.0" prefHeight="42.0" prefWidth="249.0" text="Manage Book" textFill="#ff340c">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="35.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="802.0" layoutY="133.0" prefHeight="3.0" prefWidth="328.0" style="-fx-background-color: #ed340c;" />
+      <Button layoutX="1294.0" layoutY="-1.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="30.0" prefWidth="76.0" style="-fx-background-color: red;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="247.0" fitWidth="326.0" layoutX="413.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/image/30.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
